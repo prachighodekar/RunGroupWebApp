@@ -1,0 +1,32 @@
+﻿@using RunGroupWebApp.ViewModels
+@model EditUserDashboardViewModel
+
+<form method="post" asp-action="EditUserprofile" enctype="multipart/form-data">
+    <input type="hidden" id="Id" name="Id" asp-for="Id" />
+    <div class="form-group">
+        <lable asp-for="Pace">Pace</lable>
+        <input asp-for="Pace" class="form-control" placeholder="Pace" /> 
+        <span asp-validation-for="Pace" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <lable asp-for="Mileage">Mileage</lable>
+        <input asp-for="Mileage" class="form-control" placeholder="Mileage" /> 
+        <span asp-validation-for="Mileage" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <lable asp-for="City">City</lable>
+        <input asp-for="City" class="form-control" placeholder="City" /> 
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <lable asp-for="State">State</lable>
+        <input asp-for="State" class="form-control" placeholder="State" /> 
+        <span asp-validation-for="State" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <lable asp-for="Image">Profile Image</lable>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Image" /> 
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
